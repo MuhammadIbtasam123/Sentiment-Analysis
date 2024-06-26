@@ -92,8 +92,8 @@ text_model = joblib.load(model_path)
 def load_model_from_disk():
     print("Loading model from disk...")
     try:
-        model_config_path = './Models/model.json'
-        model_weights_path = './Models/model_weights.h5'
+        model_config_path = '../Models/model.json'
+        model_weights_path = '../Models/model_weights.h5'
 
         if not os.path.exists(model_config_path):
             raise FileNotFoundError(f"Model configuration file {model_config_path} does not exist.")
@@ -184,7 +184,7 @@ def analyze():
     video_file = request.files['video']
 
     # Save the video file temporarily
-    video_path = './Models/temp_video.mp4'
+    video_path = '../Models/temp_video.mp4'
     video_file.save(video_path)
 
     # Preprocess the chat text
