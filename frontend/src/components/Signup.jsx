@@ -24,10 +24,13 @@ const Signup = () => {
 
   const handleSignup = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/signup", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://sentiment-analysis-eta-seven.vercel.app/signup",
+        {
+          email,
+          password,
+        }
+      );
       console.log(response);
       if (
         response.data.status === "success" ||

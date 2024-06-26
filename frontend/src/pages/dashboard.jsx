@@ -30,7 +30,7 @@ const Dashboard = () => {
 
       try {
         const response = await axios.post(
-          "http://localhost:5000/analyze",
+          "https://sentiment-analysis-eta-seven.vercel.app/analyze",
           formData,
           {
             headers: {
